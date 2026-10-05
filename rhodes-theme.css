@@ -210,3 +210,7 @@ input:focus,select:focus,textarea:focus{
   border-bottom:3px solid #6b4b2e!important;
   box-shadow:0 8px 22px rgba(22,37,27,.24)!important;
 }
+
+/* Bannière Strawberry : le texte est déjà intégré au visuel fourni, aucun texte HTML par-dessus. */
+#dashboard .rh-hero-copy,
+#dashboard .rh-hero blockquote{display:none!important;}
