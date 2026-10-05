@@ -29,8 +29,11 @@
 }
 
 body {
-  background-color:var(--st-dark);
-  background-image:linear-gradient(#10251ab8,#10251ab8),var(--rh-wood);
+  /* Fond bois d'origine, sans voile vert Strawberry. */
+  background-color:#211309;
+  background-image:var(--rh-wood);
+  background-repeat:repeat;
+  background-size:650px;
   color:var(--st-ivory);
 }
 main,.view {color:var(--st-ivory)}
