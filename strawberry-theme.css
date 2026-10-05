@@ -564,59 +564,11 @@ table thead th strong{
   color:#f0d79a!important;
 }
 
-
-/* === Zones fonctionnelles restaurées au rendu Rhodes === */
-/* La carte Montant de la caisse ne prend pas la couleur de la ville. */
-.metric.accent{
-  background-color:#3c0e12!important;
-  background-image:linear-gradient(120deg,#55151177,#180502bb),var(--rh-grain)!important;
-  border-color:#4e250b!important;
-  box-shadow:inset 0 0 0 3px #1b0d08,inset 0 0 0 4px #af7c35,0 2px 4px #38241166!important;
-  color:#fff0df!important;
-}
+/* Carte caisse : conserver le fond du thème de la ville, mais texte clair. */
 .metric.accent .label,
 .metric.accent .value{
-  color:#fff0df!important;
+  color:#fff3d2!important;
 }
 .metric.accent .sub{
-  color:#e8bd73!important;
-}
-
-/* Fournisseurs : conserver le style Rhodes d'origine, pas la couleur de la ville. */
-#suppliers .supplier-place-row td,
-#suppliers .supplier-place-row:hover td{
-  padding:11px 13px!important;
-  background:linear-gradient(90deg,rgba(111,26,18,.94),rgba(75,42,30,.94))!important;
-  border-style:solid!important;
-  border-color:rgba(199,156,84,.55)!important;
-  color:#f5db9c!important;
-}
-#suppliers .supplier-place-heading strong{
-  color:#f5db9c!important;
-}
-#suppliers .supplier-place-products small,
-#suppliers .supplier-place-products .muted{
-  color:#cdb88a!important;
-}
-#suppliers .supplier-product{
-  display:inline-block;
-  padding:5px 8px;
-  border:1px solid rgba(199,156,84,.45)!important;
-  background:rgba(199,156,84,.09)!important;
-  color:#ecd69e!important;
-}
-#suppliers .supplier-directory .location-name{
-  color:#f2d384!important;
-}
-#suppliers .supplier-edit-title{
-  color:#d9c495!important;
-}
-#suppliers .telegram-cell .copy-telegram-btn{
-  background:transparent!important;
-  border-color:#755d40!important;
-  color:#684a27!important;
-  box-shadow:none!important;
-}
-#suppliers .currency-input::after{
-  color:#684a27!important;
+  color:#f0d79a!important;
 }
