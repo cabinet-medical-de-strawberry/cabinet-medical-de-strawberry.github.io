@@ -1,7 +1,7 @@
 (function(){
   const STATIC_PAGE_COUNT=64;
   const staticPages=Array.from({length:STATIC_PAGE_COUNT},(_,i)=>({
-    kind:"image", number:i+1, src:"https://raw.githubusercontent.com/cabinet-medical-de-rhodes/cabinet-medical-de-rhodes.github.io/main/assets/guide-medecine/"+(i+1)+".webp"
+    kind:"image", number:i+1, src:"assets/guide-medecine/"+(i+1)+".webp"
   }));
 
   function init(ctx){
