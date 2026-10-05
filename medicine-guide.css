@@ -18,3 +18,142 @@
 #medicineGuide .guide-admin-grid{display:grid;grid-template-columns:1fr;gap:10px}
 #medicineGuide .guide-admin textarea{min-height:220px}
 @media(max-width:700px){#medicineGuide .guide-book{grid-template-columns:34px minmax(0,1fr) 34px;gap:5px}#medicineGuide .guide-paper{min-height:620px;padding:35px 25px}#medicineGuide .guide-arrow{width:34px;height:52px;font-size:22px;margin-top:190px}}
+
+/* === Strawberry site palette override === */
+:root{
+  --st-night:#101713;
+  --st-deep:#18271f;
+  --st-pine:#244535;
+  --st-moss:#49634c;
+  --st-wood:#513526;
+  --st-leather:#6a4430;
+  --st-brass:#b8955c;
+  --st-cream:#eadcbc;
+  --st-soft:#cdbd9a;
+}
+
+/* Bannière 1280×426 : conserver le visuel complet, sans rognage. */
+#dashboard .rh-hero,
+.rh-hero{
+  width:100%!important;
+  aspect-ratio:1280 / 426!important;
+  min-height:0!important;
+  height:auto!important;
+  background-size:contain!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-color:#15241c!important;
+  border:1px solid rgba(184,149,92,.55)!important;
+  border-bottom:3px solid var(--st-leather)!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.38)!important;
+}
+#dashboard .rh-hero-copy,
+#dashboard .rh-hero blockquote{display:none!important;}
+
+/* Strawberry : forêt sombre, bois et laiton. Contraste fort partout. */
+html,body{background-color:var(--st-night)!important;color:var(--st-cream)!important;}
+body{
+  background-image:
+    radial-gradient(circle at 72% 0%,rgba(73,99,76,.14),transparent 34%),
+    linear-gradient(180deg,rgba(10,17,13,.34),rgba(8,12,10,.64)),
+    var(--rh-wood)!important;
+  background-attachment:fixed!important;
+}
+.sidebar{
+  background:
+    linear-gradient(180deg,rgba(24,45,35,.98),rgba(14,23,18,.99)),
+    var(--rh-wood)!important;
+  border-right:1px solid rgba(184,149,92,.38)!important;
+  box-shadow:8px 0 26px rgba(0,0,0,.25)!important;
+}
+.sidebar .brand,
+.sidebar .nav button,
+.sidebar .private-nav-title{color:var(--st-cream)!important;}
+.sidebar .brand p,.sidebar .muted{color:var(--st-soft)!important;}
+.sidebar .nav button:hover{
+  background:rgba(73,99,76,.25)!important;
+  color:#fff3d5!important;
+}
+.sidebar .nav button.active{
+  background:linear-gradient(90deg,rgba(73,99,76,.50),rgba(36,69,53,.30))!important;
+  color:#fff2d0!important;
+  border-color:rgba(184,149,92,.48)!important;
+  box-shadow:inset 3px 0 0 var(--st-brass)!important;
+}
+
+.topbar{
+  background:linear-gradient(180deg,#2b4035,#1c2d25)!important;
+  color:var(--st-cream)!important;
+  border-bottom:1px solid rgba(184,149,92,.48)!important;
+  box-shadow:0 5px 16px rgba(0,0,0,.22)!important;
+}
+.topbar *{color:inherit;}
+.topbar .muted{color:var(--st-soft)!important;}
+
+.main,.content{
+  background:linear-gradient(180deg,rgba(18,29,23,.97),rgba(13,21,17,.98))!important;
+  color:var(--st-cream)!important;
+}
+.card,.metric,.panel{
+  background:linear-gradient(180deg,rgba(42,61,50,.97),rgba(27,42,34,.98))!important;
+  border-color:rgba(184,149,92,.42)!important;
+  color:var(--st-cream)!important;
+  box-shadow:0 6px 20px rgba(0,0,0,.22)!important;
+}
+.card h1,.card h2,.card h3,.card h4,
+.panel h1,.panel h2,.panel h3,
+.section-title,.metric .label{color:#f0dfbb!important;}
+.metric .value,.card strong,.panel strong{color:#d7b572!important;}
+.muted,.hint,.help,.subtle{color:var(--st-soft)!important;}
+
+table{color:var(--st-cream)!important;border-color:rgba(184,149,92,.30)!important;}
+table thead th{
+  background:#203c2f!important;
+  color:#f4e3bd!important;
+  border-color:#49634c!important;
+}
+table tbody tr{background:rgba(31,48,39,.92)!important;}
+table tbody tr:nth-child(even){background:rgba(42,60,49,.92)!important;}
+table tbody tr:hover{background:rgba(73,99,76,.40)!important;}
+table tbody td{
+  color:#eadcbc!important;
+  border-color:rgba(184,149,92,.22)!important;
+}
+
+.btn,.topbar-bureau-shortcut{
+  background:linear-gradient(180deg,#315744,#213c30)!important;
+  color:#f5e6c6!important;
+  border-color:#8e7449!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.35)!important;
+}
+.btn:hover,.topbar-bureau-shortcut:hover{
+  background:linear-gradient(180deg,#3c6951,#294a3a)!important;
+  filter:none!important;
+}
+.btn.good{background:linear-gradient(180deg,#3e684e,#294b39)!important;}
+.btn.danger{background:linear-gradient(180deg,#814536,#603126)!important;}
+.btn.secondary{background:linear-gradient(180deg,#5b4635,#3d3027)!important;}
+
+input,select,textarea{
+  background:#17251e!important;
+  color:#f0dfbd!important;
+  border-color:#806a47!important;
+  caret-color:#f0dfbd!important;
+}
+input::placeholder,textarea::placeholder{color:#aa9b7d!important;opacity:1!important;}
+select option{background:#17251e!important;color:#f0dfbd!important;}
+input:focus,select:focus,textarea:focus{
+  border-color:var(--st-brass)!important;
+  box-shadow:0 0 0 2px rgba(184,149,92,.18)!important;
+  outline:none!important;
+}
+.badge,.pill{
+  background:#243b30!important;
+  color:#eadcbc!important;
+  border-color:#806a47!important;
+}
+a{color:#d7b572;}
+a:hover{color:#f3d79f;}
+
+/* Les véritables pages papier/parchemin gardent une encre foncée. */
+.paper,.parchment,[class*="paper-sheet"],[class*="parchment"]{color:#241a12;}
