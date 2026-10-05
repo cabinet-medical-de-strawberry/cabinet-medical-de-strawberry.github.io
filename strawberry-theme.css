@@ -572,3 +572,10 @@ table thead th strong{
 .metric.accent .sub{
   color:#f0d79a!important;
 }
+
+
+/* Encart télégramme Strawberry : vert forêt sur parchemin. */
+#telegramOwnerName,
+#telegramPlaque{
+  color:#173d29!important;
+}
