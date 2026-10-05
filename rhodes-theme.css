@@ -140,6 +140,6 @@ body{background-image:linear-gradient(#07040255,#07040255),var(--rh-wood)}
 
 
 /* === Identité Strawberry === */
-:root{--rh-banner:url("strawberry-banner.webp");--rh-green:#123528;--rh-cream:#f4e6c8;--rh-brown:#2d1d13;--rh-paper:#efe0be;--rh-gold:#b78a43;}
+:root{--rh-banner:url("strawberry-banner.webp"),url("rhodes-dashboard-hero-art.webp");--rh-green:#123528;--rh-cream:#f4e6c8;--rh-brown:#2d1d13;--rh-paper:#efe0be;--rh-gold:#b78a43;}
 .rh-hero{background-image:var(--rh-banner)!important;background-size:cover!important;background-position:center!important;min-height:clamp(250px,33vw,430px)!important;}
-.rh-hero .rh-hero-copy,.rh-hero blockquote{display:none!important;}
+
