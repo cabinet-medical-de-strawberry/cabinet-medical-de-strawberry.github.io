@@ -215,3 +215,248 @@ input:focus,select:focus,textarea:focus {border-color:var(--st-mid);box-shadow:0
 @media print {
   .card,.card .section-title,.card th,.card td {background:white!important;color:black!important;box-shadow:none}
 }
+/* === Renforcement contraste Strawberry === */
+:root{
+  --st-light-gold:#f0d79a;
+  --st-light-ivory:#fff3d2;
+  --st-paper-ink:#2a1a12;
+  --st-paper-muted:#5a402c;
+}
+
+/* Règle stricte : fonds sombres = texte clair/doré. */
+.sidebar,
+.topbar,
+.auth-card,
+.book-dialog,
+.supplier-add-dialog,
+.book-directory,
+.admin-notebook-index,
+#medicineGuide .guide-admin,
+.bureau-gif-picker,
+.debt-board,
+.toast,
+.metric.accent,
+#suppliers .supplier-place-row td,
+#dashboard .orders-table .supplier-group-row td,
+.supplier-product{
+  color:var(--st-light-ivory)!important;
+}
+.sidebar h1,.sidebar h2,.sidebar h3,.sidebar strong,
+.topbar h1,.topbar h2,.topbar h3,.topbar strong,
+.auth-card h1,.auth-card h2,.auth-card h3,
+.book-dialog h1,.book-dialog h2,.book-dialog h3,
+.supplier-add-dialog h1,.supplier-add-dialog h2,.supplier-add-dialog h3,
+.book-directory h1,.book-directory h2,.book-directory h3,
+#medicineGuide .guide-admin h1,#medicineGuide .guide-admin h2,#medicineGuide .guide-admin h3,
+.bureau-gif-picker strong,.toast strong{
+  color:var(--st-light-gold)!important;
+}
+.sidebar .brand h1,
+.sidebar .nav button,
+.sidebar .private-nav-title,
+.sidebar .user-box strong,
+.topbar h2,.topbar p,
+.date-badge,.date-badge strong{
+  color:var(--st-light-ivory)!important;
+}
+.sidebar .nav button.active,
+.sidebar .nav button:hover{
+  color:var(--st-light-gold)!important;
+}
+.sidebar #nav button[data-view=bureau]{
+  color:var(--st-light-gold)!important;
+}
+.sidebar .user-box,
+.sidebar .user-box .mutedline,
+.sidebar .brand p,
+.footer{
+  color:#e8d5aa!important;
+}
+.sidebar .sync-state.ok{color:var(--st-light-ivory)!important}
+.sidebar .sync-state.busy{color:var(--st-light-gold)!important}
+.sidebar .sync-state.bad{color:#ffd0c2!important}
+
+/* Entêtes verts foncés : jamais de vert sur vert. */
+.card .section-title,
+.section-title,
+.card th,
+table thead th,
+#pharmacy .pharmacy-table th,
+#suppliers .supplier-place-row td,
+#dashboard .orders-table .supplier-group-row td{
+  color:var(--st-light-ivory)!important;
+}
+.card .section-title strong,
+.section-title strong,
+.card th strong,
+table thead th strong,
+#suppliers .supplier-place-row td strong,
+#dashboard .orders-table .supplier-group-row td strong{
+  color:var(--st-light-gold)!important;
+}
+.section-title small{
+  color:#eed5a0!important;
+}
+
+/* Boutons sombres : texte toujours clair. */
+.btn,.btn.ghost,.card .btn.ghost,.topbar-bureau-shortcut,.order-calendar-btn,
+.btn.good,.card .btn.good,.btn.secondary,.btn.danger{
+  color:var(--st-light-ivory)!important;
+}
+.btn strong,.topbar-bureau-shortcut strong{
+  color:var(--st-light-gold)!important;
+}
+
+/* Cartes et parchemins clairs : encre sombre uniquement. */
+.card,
+.card-body,
+.table-wrap,
+.inventory-summary,
+.quick-actions,
+.history-controls,
+.craft-head,
+.recipe-note,
+.westlegacy-panel,
+.supplier-directory,
+.bureau-messages,
+.bureau-composer,
+.book-paper,
+#medicineGuide .guide-paper{
+  color:var(--st-paper-ink)!important;
+}
+.card p,.card li,.card dd,.card dt,
+.card .hint,.card .muted,.card .empty,
+.card .field label,
+.metric .sub,
+.bureau-intro span,.bureau-grade,.bureau-time,.bureau-empty,.bureau-file-size,
+.bureau-typing,.bureau-composer .hint,.bureau-giphy-mark{
+  color:var(--st-paper-muted)!important;
+}
+.card h1,.card h2,.card h3,.card h4,
+.card .resource-name,.card .money,
+.metric .label,.metric .value,
+#cashBig,#cashBig + .hint,
+.cash-current-label,
+.bureau-intro strong,.bureau-author,
+.westlegacy-panel h3,.westlegacy-panel p{
+  color:#173523!important;
+}
+
+/* Corps de tableaux clairs : texte sombre, aucune teinte ton-sur-ton. */
+.card td,
+.card tbody td,
+#historyBody td,
+#usersBody td,
+#apprenticesBody td{
+  color:var(--st-paper-ink)!important;
+}
+#historyBody td strong,
+#usersBody td strong,
+#apprenticesBody td strong{
+  color:#173523!important;
+}
+
+/* Formulaires sur fond clair : noir/brun très foncé. */
+input,select,textarea,
+.card input,.card select,.card textarea,
+.card .recipe-matrix input,
+.rh-dashboard-bottom .pricing-table input,
+.book-report .book-inline-field,
+.debt-field input{
+  background:#fff4dc!important;
+  color:#26180f!important;
+  border-color:#8f6939!important;
+}
+input::placeholder,textarea::placeholder,
+.book-report .book-inline-field::placeholder,
+.debt-field input::placeholder{
+  color:#6b4d32!important;
+  opacity:1!important;
+}
+select option,.card select option{
+  background:#fff4dc!important;
+  color:#26180f!important;
+}
+
+/* Statuts : fond clair + texte foncé, jamais texte vert sur fond vert. */
+.pill,.pill.gold,#lowStockPanel .pill{
+  background:#f3dfb6!important;
+  color:#4a321b!important;
+  border-color:#9a703a!important;
+}
+.pill.green,
+.orders-table .order-status.status-en-cours,
+.orders-table .order-status.status-livre{
+  background:#efe1bd!important;
+  color:#21442f!important;
+  border-color:#6e7f54!important;
+}
+.pill.red{
+  background:#f2d1c4!important;
+  color:#6f261f!important;
+  border-color:#a55d4b!important;
+}
+.orders-table .order-status.status-a-commander{
+  background:#f2dfb1!important;
+  color:#513817!important;
+  border-color:#9a703a!important;
+}
+
+/* Bureau / tchat : papier clair = texte sombre ; popups sombres = texte clair. */
+.bureau-body{
+  color:#201811!important;
+}
+.bureau-author{
+  color:#173523!important;
+}
+.bureau-avatar{
+  background:#173d29!important;
+  color:var(--st-light-gold)!important;
+  border-color:var(--st-gold)!important;
+}
+.bureau-file-card{
+  color:#173523!important;
+}
+.bureau-gif-picker,
+.bureau-gif-picker *{
+  color:var(--st-light-ivory)!important;
+}
+.bureau-giphy-brand,
+.bureau-gif-footer strong{
+  color:var(--st-light-gold)!important;
+}
+
+/* Carnets / guide : zones sombres en clair, papier en sombre. */
+.book-tab:hover,.book-tab.selected,
+.admin-notebook-group summary,
+.admin-notebook-link.selected{
+  color:var(--st-light-ivory)!important;
+}
+.book-paper,
+.book-paper h2,
+.book-paper .book-kicker,
+.book-paper .book-folio,
+.book-paper .book-report,
+.book-paper .book-oath,
+#medicineGuide .guide-paper,
+#medicineGuide .guide-paper h3,
+#medicineGuide .guide-final{
+  color:#291b12!important;
+}
+.book-page-arrow,#medicineGuide .guide-arrow{
+  color:var(--st-light-gold)!important;
+}
+
+/* Liens sur fonds clairs : foncés. */
+.card a,
+.bureau-messages a,
+.bureau-composer a,
+#medicineGuide .guide-paper a{
+  color:#244f35!important;
+}
+.card a:hover,
+.bureau-messages a:hover,
+.bureau-composer a:hover,
+#medicineGuide .guide-paper a:hover{
+  color:#6d471f!important;
+}
