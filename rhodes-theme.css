@@ -143,3 +143,70 @@ body{background-image:linear-gradient(#07040255,#07040255),var(--rh-wood)}
 :root{--rh-banner:url("strawberry-banner.webp"),url("rhodes-dashboard-hero-art.webp");--rh-green:#123528;--rh-cream:#f4e6c8;--rh-brown:#2d1d13;--rh-paper:#efe0be;--rh-gold:#b78a43;}
 .rh-hero{background-image:var(--rh-banner)!important;background-size:cover!important;background-position:center!important;min-height:clamp(250px,33vw,430px)!important;}
 
+
+
+/* === Refonte couleur Strawberry — ville forestière de Big Valley === */
+:root{
+  --city-deep:#17392d;
+  --city-mid:#315a43;
+  --city-soft:#6f8b61;
+  --city-warm:#7b4d2c;
+  --city-paper:#efe2c0;
+  --city-paper-2:#f7edd5;
+  --city-gold:#c39a54;
+  --city-ink:#24170f;
+}
+body{background-color:#1b241c!important;}
+.sidebar{
+  background:
+    linear-gradient(180deg,rgba(18,46,35,.97),rgba(25,37,27,.98)),
+    var(--rh-wood)!important;
+  border-right:1px solid rgba(195,154,84,.45)!important;
+}
+.sidebar .brand,.sidebar .nav button,.sidebar .private-nav-title{color:#f3e7c8!important;}
+.sidebar .nav button:hover{background:rgba(111,139,97,.18)!important;}
+.sidebar .nav button.active{
+  background:linear-gradient(90deg,rgba(111,139,97,.34),rgba(111,139,97,.12))!important;
+  border-color:rgba(195,154,84,.55)!important;
+}
+.topbar{
+  background:linear-gradient(180deg,#f5e8c9,#ead7ac)!important;
+  border-bottom-color:#8f6a3f!important;
+  color:#2a1a10!important;
+}
+.main,.content{background-color:rgba(239,226,192,.94)!important;}
+.card{
+  background:linear-gradient(180deg,rgba(247,237,213,.97),rgba(236,218,178,.96))!important;
+  border-color:#9f7c4d!important;
+  box-shadow:0 5px 18px rgba(28,36,27,.18)!important;
+}
+.card h3,.section-title,.metric .label{color:#244334!important;}
+.metric .value{color:#6e4328!important;}
+table thead th{
+  background:#274a38!important;
+  color:#f4e7c8!important;
+  border-color:#456a53!important;
+}
+table tbody tr:nth-child(even){background:rgba(111,139,97,.08)!important;}
+.btn,.topbar-bureau-shortcut{
+  background:linear-gradient(180deg,#365f48,#244334)!important;
+  color:#f7edd5!important;
+  border-color:#7d6846!important;
+}
+.btn:hover,.topbar-bureau-shortcut:hover{filter:brightness(1.08)!important;}
+.btn.good{background:linear-gradient(180deg,#426d50,#2d533c)!important;}
+.btn.danger{background:linear-gradient(180deg,#7f3b2c,#5e2b22)!important;}
+input,select,textarea{
+  background:#f8eed7!important;
+  border-color:#a4875c!important;
+  color:#271a12!important;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:#56775d!important;
+  box-shadow:0 0 0 2px rgba(86,119,93,.16)!important;
+}
+.badge,.pill{border-color:#8d744e!important;}
+#dashboard .rh-hero{
+  border-bottom:3px solid #6b4b2e!important;
+  box-shadow:0 8px 22px rgba(22,37,27,.24)!important;
+}
