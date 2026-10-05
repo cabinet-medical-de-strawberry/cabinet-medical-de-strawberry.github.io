@@ -1186,7 +1186,7 @@ textarea::placeholder{
 #newRecipeName,#newIngredientName,#supplierNewResourceName,.recipe-name{text-transform:uppercase}
 </style>
 <link rel="stylesheet" href="medicine-guide.css">
-<link rel="stylesheet" href="strawberry-theme.css?v=20261005-rhodes-surfaces">
+<link rel="stylesheet" href="strawberry-theme.css?v=20261005-cash-suppliers-clean">
 </head>
 <body class="locked" data-site-version="2026-09-21-1806">
 
@@ -2958,18 +2958,12 @@ $('navigationSave').addEventListener('click',async()=>{
         recipeId:p.recipe_id,
         quantity:num(p.quantity)
       }));
-      state.suppliers=(suppliers.data||[]).map(s=>({
-        dbId:s.id,resourceId:s.resource_id,unitPrice:num(s.unit_price ?? res(s.resource_id)?.unitPrice),
-        name:s.supplier_name||"",telegram:s.telegram||"",place:s.location||""
-      }));
-      ingredientResources().forEach(r=>{
-        if(!state.suppliers.some(s=>s.resourceId===r.id)){
-          state.suppliers.push({
-            dbId:null,resourceId:r.id,unitPrice:num(r.unitPrice),
-            name:"",telegram:"",place:""
-          });
-        }
-      });
+      state.suppliers=(suppliers.data||[])
+        .filter(s=>(s.location||"").trim())
+        .map(s=>({
+          dbId:s.id,resourceId:s.resource_id,unitPrice:num(s.unit_price ?? res(s.resource_id)?.unitPrice),
+          name:s.supplier_name||"",telegram:s.telegram||"",place:s.location||""
+        }));
       state.orders=(orders.data||[]).map(o=>({
         id:o.id,
         resourceId:o.resource_id,
@@ -3380,15 +3374,11 @@ $('navigationSave').addEventListener('click',async()=>{
   function renderSuppliers(){
     const uniqueProducts=list=>[...new Set(list.map(s=>res(s.resourceId)?.name).filter(Boolean))]
       .sort((a,b)=>a.localeCompare(b,"fr-FR",{sensitivity:"base"}));
-    const fixedPlaces=supplierPlaceNames();
-    const hasUnassigned=state.suppliers.some(s=>s.resourceId&&!(s.place||"").trim());
-    const places=hasUnassigned?[...fixedPlaces,"Lieu non renseigné"]:fixedPlaces;
+    const places=supplierPlaceNames();
 
     $("suppliersBody").innerHTML=places.map(place=>{
       const atPlace=state.suppliers.filter(s=>s.resourceId)
-        .filter(s=>place==="Lieu non renseigné"
-          ? !(s.place||"").trim()
-          : (s.place||"").trim()===place)
+        .filter(s=>(s.place||"").trim()===place)
         .sort((a,b)=>String(res(a.resourceId)?.name||"").localeCompare(String(res(b.resourceId)?.name||""),"fr-FR",{sensitivity:"base"}));
       const products=uniqueProducts(atPlace);
 
@@ -3399,7 +3389,7 @@ $('navigationSave').addEventListener('click',async()=>{
         <td colspan="4">
           <div class="supplier-place-heading">
             <strong>${esc(place)}</strong>
-            <div class="supplier-place-products"><small>Produits vendus :</small>${productSummary}${place!=="Lieu non renseigné"?`<button class="btn secondary supplier-add-ingredient" type="button" data-place="${esc(place)}" aria-label="Ajouter un ingrédient à ${esc(place)}" title="Ajouter un ingrédient">+</button>${isAdmin?`<button class="btn danger supplier-delete-place" type="button" data-place="${esc(place)}" aria-label="Supprimer le lieu ${esc(place)}" title="Supprimer ce lieu">Supprimer le lieu</button>`:""}`:""}</div>
+            <div class="supplier-place-products"><small>Produits vendus :</small>${productSummary}<button class="btn secondary supplier-add-ingredient" type="button" data-place="${esc(place)}" aria-label="Ajouter un ingrédient à ${esc(place)}" title="Ajouter un ingrédient">+</button>${isAdmin?`<button class="btn danger supplier-delete-place" type="button" data-place="${esc(place)}" aria-label="Supprimer le lieu ${esc(place)}" title="Supprimer ce lieu">Supprimer le lieu</button>`:""}</div>
           </div>
         </td>
       </tr>`;
