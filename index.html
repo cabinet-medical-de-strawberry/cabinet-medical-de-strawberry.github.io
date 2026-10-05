@@ -3501,7 +3501,7 @@ $('adminNotebookIndex').addEventListener('click',e=>{
   function renderSettings(){
     $("settingName").value=state.settings.name||"";$("settingPlace").value=state.settings.place||"";$("settingTelegram").value=state.settings.telegram||"";$("settingCash").value=num(state.cash).toFixed(2);$("telegramPlaque").textContent=state.settings.telegram||"—";
     if($("telegramOwnerName"))$("telegramOwnerName").textContent="JOHN MYERS";
-    document.querySelector(".brand h1").innerHTML=esc(state.settings.name).replace(/\sde\sRhodes/i,"<br>de Strawberry");
+    document.querySelector(".brand h1").innerHTML=esc(state.settings.name).replace(/\sde\sStrawberry/i,"<br>de Strawberry");
     document.querySelector(".brand p").textContent=state.settings.place;
   }
   function renderAll(){renderDashboard();renderInventory();fillMovementResources();renderCraft();renderRecipes();fillRemoveIngredientSelect();renderSuppliers();renderHistory();renderSettings();}
