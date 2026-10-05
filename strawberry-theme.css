@@ -463,3 +463,103 @@ select option,.card select option{
 #medicineGuide .guide-paper a:hover{
   color:#6d471f!important;
 }
+/* === Aucun texte ton-sur-ton sur Strawberry === */
+
+/* Éléments sombres/verts : texte chaud et clair, jamais vert. */
+.edit-lock-badge.own{
+  background:#173d29!important;
+  border-color:#c49a50!important;
+  color:#fff0cd!important;
+}
+.sync-state.ok,
+.status-approved,
+.debt-status.ok{
+  color:#f0d79a!important;
+}
+.pharmacy-count,
+#pharmacy .pharmacy-count{
+  background:linear-gradient(#315b3f,#173d29)!important;
+  border-color:#c49a50!important;
+  color:#fff0cd!important;
+}
+
+/* Les statuts positifs ne sont plus vert-sur-vert. */
+.pill.green,
+#lowStockPanel .pill.green,
+.orders-table .order-status.status-en-cours,
+.orders-table .order-status.status-livre{
+  background:#f0ddb3!important;
+  color:#3d2a18!important;
+  border-color:#9b713a!important;
+}
+
+/* Texte "OK / positif" : brun sur parchemin, doré clair sur zones sombres. */
+.card .good,
+.card td .good,
+.inventory-summary .good,
+.craft-stock-box .good,
+.orders-payment-summary .good{
+  color:#51341f!important;
+}
+.metric.accent .good,
+.sidebar .good,
+.topbar .good,
+.auth-card .good,
+.book-dialog .good,
+.supplier-add-dialog .good,
+.book-directory .good,
+#medicineGuide .guide-admin .good,
+.bureau-gif-picker .good,
+.debt-board .good{
+  color:#f0d79a!important;
+}
+
+/* Sur toutes les barres et panneaux vert foncé, les textes secondaires restent clairs. */
+.sidebar .muted,
+.sidebar .hint,
+.sidebar small,
+.topbar .muted,
+.topbar .hint,
+.topbar small,
+.metric.accent .muted,
+.metric.accent .hint,
+.metric.accent small,
+#suppliers .supplier-place-row td .muted,
+#dashboard .orders-table .supplier-group-row td .muted,
+.supplier-product .muted{
+  color:#ead7ad!important;
+}
+
+/* En-têtes verts : tous les contenus texte sont ivoire ou doré. */
+.card .section-title span,
+.card .section-title small,
+.card .section-title strong,
+.section-title span,
+.section-title small,
+.section-title strong,
+.card th span,
+.card th small,
+.card th strong,
+table thead th span,
+table thead th small,
+table thead th strong{
+  color:#fff0cd!important;
+}
+.card .section-title small,
+.section-title small,
+.card th strong,
+table thead th strong{
+  color:#f0d79a!important;
+}
+
+/* Boutons verts : texte chaud clair uniquement. */
+.btn.good,
+.card .btn.good,
+#dashboard .orders-form .order-add-wrap .btn.good,
+#dashboard .quick-actions .btn.good{
+  color:#fff0cd!important;
+}
+.btn.good strong,
+.card .btn.good strong{
+  color:#f0d79a!important;
+}
