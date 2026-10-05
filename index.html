@@ -1646,6 +1646,7 @@ textarea::placeholder{
             <div class="field"><label>Recette</label><select id="craftRecipe"></select></div>
             <div class="field"><label>Quantité à fabriquer</label><input type="number" id="craftQty" value="1" min="1" step="1"></div>
             <div class="craft-stock-box"><span>Stock du soin sélectionné</span><strong id="craftProductStock">0</strong></div>
+            <div class="craft-stock-box"><span>Coût de fabrication total</span><strong id="craftCostTotal">0,00 $</strong></div>
             <div class="craft-action-stack">
               <button class="btn good big" id="craftButton">Fabriquer</button>
               <button class="btn big craft-order-btn" id="orderCraftButton" type="button">Commander</button>
@@ -3321,12 +3322,15 @@ $('navigationSave').addEventListener('click',async()=>{
     if(!rc){
       $("craftBody").innerHTML=`<tr><td colspan="6" class="empty">Aucune recette.</td></tr>`;
       $("craftProductStock").textContent="0";
+      $("craftCostTotal").textContent=money(0);
       $("craftButton").disabled=true;
       $("orderCraftButton").disabled=true;
       return;
     }
     const product=res(rc.productId);
     $("craftProductStock").textContent=num(product?.stock);
+    const unitFabricationCost=recipeUnitCost(rc.productId);
+    $("craftCostTotal").textContent=money(unitFabricationCost*qty);
     const rows=Object.entries(rc.ingredients).filter(([,q])=>num(q)>0); let allOk=true;
     const STOCK_BAR_MAX=200;
     $("craftBody").innerHTML=rows.map(([id,per])=>{
@@ -3357,7 +3361,7 @@ $('navigationSave').addEventListener('click',async()=>{
 
       return `<tr><td class="resource-name">${esc(r?.name||id)}</td><td>${num(per)}</td><td><strong>${need}</strong></td><td>${have}</td><td><div class="progress"><span class="${stockMissing>0?"short":""}" style="width:${ratio}%"></span></div><div class="hint">${esc(availability)} · ${have}/${STOCK_BAR_MAX}</div></td><td class="craft-order-cell ${missing>0?"bad":"good"}">${orderCell}</td></tr>`;
     }).join("");
-    $("craftDescription").innerHTML=`Fabrication de <strong>${qty} ${esc(product?.name||rc.productId)}</strong>. Les besoins cumulent cette fabrication et les autres fabrications déjà prévues qui utilisent les mêmes ingrédients. Le stock et les commandes « À commander » et « En cours » sont déduits.`;
+    $("craftDescription").innerHTML=`Fabrication de <strong>${qty} ${esc(product?.name||rc.productId)}</strong> · coût unitaire <strong>${money(unitFabricationCost)}</strong> · coût total <strong>${money(unitFabricationCost*qty)}</strong>. Les besoins cumulent cette fabrication et les autres fabrications déjà prévues qui utilisent les mêmes ingrédients. Le stock et les commandes « À commander » et « En cours » sont déduits.`;
     $("craftButton").disabled=!allOk||!rows.length;
     $("orderCraftButton").disabled=!rows.length;
   }
