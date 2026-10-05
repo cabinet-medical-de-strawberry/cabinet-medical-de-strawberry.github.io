@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#1b100b" />
-  <title>Cabinet Médical de Rhodes</title>
+  <title>Cabinet Médical de Strawberry</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=8">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=8">
   <link rel="shortcut icon" type="image/png" href="favicon-32x32.png?v=8">
@@ -932,7 +932,7 @@
 <div class="auth-gate hidden" id="authGate">
   <div class="auth-card">
     <div class="seal">⚕</div>
-    <h2>Cabinet Médical de Rhodes</h2>
+    <h2>Cabinet Médical de Strawberry</h2>
     <p>Registre en ligne du personnel médical</p>
     <div class="field"><label>Nom affiché / nom RP <span class="muted">(pour créer un compte)</span></label><input id="authDisplayName" type="text" autocomplete="name" maxlength="60" placeholder="Ex. John Myers"></div>
     <div class="field"><label>Adresse e-mail</label><input id="authEmail" type="email" autocomplete="email" placeholder="medecin@exemple.fr"></div>
@@ -945,7 +945,7 @@
 <div class="auth-gate hidden" id="accessGate">
   <div class="auth-card access-card">
     <div class="seal">⚕</div>
-    <h2>Accès au Cabinet de Rhodes</h2>
+    <h2>Accès au Cabinet de Strawberry</h2>
     <p id="accessLead">Vérification de ton autorisation…</p>
     <div class="access-status" id="accessStatusBox">Connexion au registre…</div>
     <div class="auth-actions">
@@ -961,7 +961,7 @@
     <div class="brand">
       <div class="seal">⚕</div>
       <div>
-        <h1>Cabinet Médical<br>de Rhodes</h1>
+        <h1>Cabinet Médical<br>de Strawberry</h1>
         <p>Lemoyne</p>
       </div>
     </div>
@@ -1224,7 +1224,7 @@
         <div class="pharmacy-glass-ledger">
           <div class="pharmacy-glass-ledger-head">
             <div>
-              <span>PHARMACIE · RHODES · 1889</span>
+              <span>PHARMACIE · STRAWBERRY · 1889</span>
               <strong>Registre de l’armoire</strong>
               <small>Réapprovisionnement à gauche · comptage réel à droite</small>
             </div>
@@ -1276,7 +1276,7 @@
               </div>
               <div class="field" style="margin-top:14px">
                 <label>Note / provenance</label>
-                <input type="text" id="mvNote" placeholder="Ex. William Flower's, achat à Rhodes…">
+                <input type="text" id="mvNote" placeholder="Ex. William Flower's, achat à Strawberry…">
               </div>
               <div class="form-actions">
                 <button class="btn big" type="submit">Enregistrer l'opération</button>
@@ -1314,7 +1314,7 @@
         <div class="debt-board">
           <div class="debt-board-header">
             <div>
-              <div class="debt-kicker">CABINET MÉDICAL DE RHODES · REGISTRE 1889</div>
+              <div class="debt-kicker">CABINET MÉDICAL DE STRAWBERRY · REGISTRE 1889</div>
               <h3>ARDOISE DES IMPAYÉS</h3>
               <p>Les dettes de plus de vingt-quatre heures sont automatiquement signalées en rouge.</p>
             </div>
@@ -1608,7 +1608,7 @@
               <label class="btn ghost" style="display:inline-flex;align-items:center">Importer une sauvegarde<input type="file" id="importData" accept=".json" hidden></label>
             </div>
             <div class="warning">
-              Cette version est reliée à la base en ligne du Cabinet-Rhodes. Seuls les comptes autorisés par l’administrateur peuvent accéder aux données.
+              Cette version est reliée à la base en ligne du Cabinet-Strawberry. Seuls les comptes autorisés par l’administrateur peuvent accéder aux données.
             </div>
             <hr class="sep">
             <button class="btn danger admin-only" id="resetAll">Réinitialiser toutes les données</button>
@@ -1624,7 +1624,7 @@
   <aside class="book-directory" aria-label="Intercalaires"><label for="bookSearch">Rechercher dans le carnet</label><input id="bookSearch" type="search" placeholder="Blessure, zone, mot-clé…"><div id="bookIndex"></div></aside>
   <div class="book-stage">
    <div class="book-spread"><button id="bookPrev" type="button" class="book-page-arrow" aria-label="Page précédente" title="Page précédente"><svg viewBox="0 0 64 40" aria-hidden="true" focusable="false"><path d="M57 20H9M23 6L8 20l15 14M29 13l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M47 15l5 5-5 5-5-5z" fill="currentColor"/></svg></button><div id="bookLeaf" class="book-leaf">
-    <button id="bookCover" class="book-cover" aria-label="Ouvrir le carnet à la page du serment"><span class="book-cover-title"><small>Cabinet Médical<br>de Rhodes</small><strong>Carnet de<br>consultations</strong><em>— 1889 —</em></span><span class="book-cover-open">OUVRIR LE CARNET</span></button>
+    <button id="bookCover" class="book-cover" aria-label="Ouvrir le carnet à la page du serment"><span class="book-cover-title"><small>Cabinet Médical<br>de Strawberry</small><strong>Carnet de<br>consultations</strong><em>— 1889 —</em></span><span class="book-cover-open">OUVRIR LE CARNET</span></button>
     <article id="bookPaper" class="book-paper" hidden></article>
    </div>
    <button id="bookNext" type="button" class="book-page-arrow book-arrow-next" aria-label="Page suivante" title="Page suivante"><svg viewBox="0 0 64 40" aria-hidden="true" focusable="false"><path d="M57 20H9M23 6L8 20l15 14M29 13l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M47 15l5 5-5 5-5-5z" fill="currentColor"/></svg></button></div><div class="book-navigation"><span id="bookCounter" aria-live="polite"></span></div>
@@ -1659,7 +1659,7 @@
   </div>
 </section>
 
-    <div class="footer">Cabinet Médical de Rhodes · Registre privé du personnel médical</div>
+    <div class="footer">Cabinet Médical de Strawberry · Registre privé du personnel médical</div>
   </main>
 </div>
 
@@ -1668,8 +1668,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (async function(){
-  const SUPABASE_URL = "https://zuduxergikwysupesdep.supabase.co";
-  const SUPABASE_KEY = "sb_publishable_eN_1pWK19vVPNHhziPGOww_6hOXdXz3";
+  const SUPABASE_URL = "https://gfazkjaxmiglktghflmy.supabase.co";
+  const SUPABASE_KEY = "__STRAWBERRY_SUPABASE_PUBLISHABLE_KEY__";
   const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
     auth:{
       persistSession:true,
@@ -1679,7 +1679,7 @@
   });
   let db = sb;
 
-  const SESSION_BACKUP_KEY = "cabinet-rhodes-session-v1";
+  const SESSION_BACKUP_KEY = "cabinet-strawberry-session-v1";
 
   function rememberSession(session){
     try{
@@ -1716,7 +1716,7 @@
           persistSession:false,
           autoRefreshToken:false,
           detectSessionInUrl:false,
-          storageKey:"cabinet-rhodes-data-client"
+          storageKey:"cabinet-strawberry-data-client"
         }
       });
     }else{
@@ -1725,7 +1725,7 @@
   }
 
   const defaults = {
-    settings:{name:"Cabinet Médical de Rhodes",place:"Rhodes · Lemoyne",telegram:"RH1959",giphyApiKey:""},
+    settings:{name:"Cabinet Médical de Strawberry",place:"Strawberry · Big Valley",telegram:"RH1959",giphyApiKey:""},
     cash:0,resources:[],recipes:[],fabricationPlans:[],suppliers:[],orders:[],pricing:[],history:[]
   };
   let state = JSON.parse(JSON.stringify(defaults));
@@ -1771,8 +1771,8 @@
     "Ranch de Big Valley",
     "Ranch d'Emerald Ranch",
     "Distillerie de Saint-Denis",
-    "Tabac de Rhodes",
-    "Cotonnerie de Rhodes",
+    "Tabac de Strawberry",
+    "Cotonnerie de Strawberry",
     "Ferme de Blackwater",
     "Ferme de Roanokee",
     "Chasse & Pêche de Window Rock"
@@ -2001,7 +2001,7 @@
       .reduce((a,h)=>a+Math.max(0,-num(h.cashDelta)),0);
   }
 
-// Cabinet de Rhodes — chaque utilisateur possède son propre carnet, créé depuis le modèle de base.
+// Cabinet de Strawberry — chaque utilisateur possède son propre carnet, créé depuis le modèle de base.
 const bookSupervisorId='d5deb745-1298-4625-8c1d-6aa0f5ebc9f7';
 const isBookSupervisor=()=>currentUser?.id===bookSupervisorId && isAdmin;
 const canEditBook=()=>!!currentUser && currentProfile?.access_status==="approved";
@@ -2171,10 +2171,10 @@ function renderBook(){
  $('bookCopy').hidden=!page?.id;
  $('bookReset').hidden=!page?.id;
  if(page?.type==='oath'){
-  $('bookPaper').innerHTML=bookOrnament+'<p class="book-kicker">Cabinet Médical de Rhodes</p><h2>Serment des médecins</h2><div class="book-oath">'+bookOath.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div>'+bookOrnament+'<p class="book-folio">Première page · Honneur & probité</p>';
+  $('bookPaper').innerHTML=bookOrnament+'<p class="book-kicker">Cabinet Médical de Strawberry</p><h2>Serment des médecins</h2><div class="book-oath">'+bookOath.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div>'+bookOrnament+'<p class="book-folio">Première page · Honneur & probité</p>';
  }else if(page){
   const cat=bookCategories.find(c=>c.id===page.category_id);
-  $('bookPaper').innerHTML=bookOrnament+'<p class="book-kicker">'+esc(cat?.name)+' · '+esc(page.subcategory)+'</p><h2>'+esc(page.title)+'</h2><div class="book-report">'+renderBookSections(page)+'</div>'+bookOrnament+'<p class="book-folio">Cabinet Médical de Rhodes · '+(bookPage+1)+'</p>';
+  $('bookPaper').innerHTML=bookOrnament+'<p class="book-kicker">'+esc(cat?.name)+' · '+esc(page.subcategory)+'</p><h2>'+esc(page.title)+'</h2><div class="book-report">'+renderBookSections(page)+'</div>'+bookOrnament+'<p class="book-folio">Cabinet Médical de Strawberry · '+(bookPage+1)+'</p>';
  }
  renderBookIndex();
 }
@@ -2346,7 +2346,7 @@ function renderAdminNotebook(){
  $('adminNotebookIndex').innerHTML='<button type="button" class="admin-notebook-link '+(adminNotebookSelected==='oath'?'selected':'')+'" data-admin-report="oath">⚕ Serment des médecins</button>'+grouped;
 
  if(adminNotebookSelected==='oath'){
-  $('adminNotebookPaper').innerHTML=bookOrnament+'<div class="admin-notebook-owner"><strong>'+esc(user?.display_name||'Personnel médical')+'</strong><br><small>'+esc(gradeLabel(user?.medical_grade))+'</small></div><p class="book-kicker">Cabinet Médical de Rhodes</p><h2>Serment des médecins</h2><div class="book-oath">'+bookOath.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div>'+bookOrnament;
+  $('adminNotebookPaper').innerHTML=bookOrnament+'<div class="admin-notebook-owner"><strong>'+esc(user?.display_name||'Personnel médical')+'</strong><br><small>'+esc(gradeLabel(user?.medical_grade))+'</small></div><p class="book-kicker">Cabinet Médical de Strawberry</p><h2>Serment des médecins</h2><div class="book-oath">'+bookOath.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div>'+bookOrnament;
   return;
  }
 
@@ -3501,7 +3501,7 @@ $('adminNotebookIndex').addEventListener('click',e=>{
   function renderSettings(){
     $("settingName").value=state.settings.name||"";$("settingPlace").value=state.settings.place||"";$("settingTelegram").value=state.settings.telegram||"";$("settingCash").value=num(state.cash).toFixed(2);$("telegramPlaque").textContent=state.settings.telegram||"—";
     if($("telegramOwnerName"))$("telegramOwnerName").textContent="JOHN MYERS";
-    document.querySelector(".brand h1").innerHTML=esc(state.settings.name).replace(/\sde\sRhodes/i,"<br>de Rhodes");
+    document.querySelector(".brand h1").innerHTML=esc(state.settings.name).replace(/\sde\sRhodes/i,"<br>de Strawberry");
     document.querySelector(".brand p").textContent=state.settings.place;
   }
   function renderAll(){renderDashboard();renderInventory();fillMovementResources();renderCraft();renderRecipes();fillRemoveIngredientSelect();renderSuppliers();renderHistory();renderSettings();}
@@ -4249,7 +4249,7 @@ $('adminNotebookIndex').addEventListener('click',e=>{
     const payload={cabinet_name:$("settingName").value.trim()||defaults.settings.name,place:$("settingPlace").value.trim()||defaults.settings.place,telegram:$("settingTelegram").value.trim(),cash_balance:Math.max(0,num($("settingCash").value))};
     try{const {error}=await db.from("cabinet_state").update(payload).eq("id",1);if(error)throw error;await loadRemoteState();toast("Paramètres enregistrés en ligne.");}catch(err){dbError(err);}
   });
-  $("exportData").addEventListener("click",()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="cabinet-rhodes-sauvegarde-"+todayISO()+".json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);});
+  $("exportData").addEventListener("click",()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="cabinet-strawberry-sauvegarde-"+todayISO()+".json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);});
   $("importData").addEventListener("change",e=>{e.target.value="";toast("L'import direct d'une ancienne sauvegarde est désactivé sur la version en ligne. Garde le fichier : je peux le convertir si besoin.");});
   $("resetAll").addEventListener("click",async()=>{
     if(!isAdmin){toast("Action réservée à l’administrateur.");return;}
