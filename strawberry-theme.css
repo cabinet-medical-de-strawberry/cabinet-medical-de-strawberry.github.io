@@ -65,7 +65,7 @@ main,.view {color:var(--st-ivory)}
 
 /* La bannière contient son texte : image entière, sans recadrage ni surimpression. */
 #dashboard .rh-hero {
-  width:100%;height:auto;min-height:0;aspect-ratio:1280 / 426;
+  width:100%;height:auto;min-height:0;aspect-ratio:2048 / 682;
   background:url("./strawberry-banner.webp") center / 100% 100% no-repeat;
   border:0;border-radius:4px;overflow:hidden;
   box-shadow:0 4px 12px #10251a55;
